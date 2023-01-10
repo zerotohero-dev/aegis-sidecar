@@ -1,4 +1,4 @@
-![Aegis](../assets/aegis-banner.png "Aegis")
+![Aegis](assets/aegis-banner.png "Aegis")
 
 ## Aegis Sidecar
 
