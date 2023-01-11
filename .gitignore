@@ -9,3 +9,5 @@
 .idea
 .code
 .history
+vendor
+aegis-sidecar

@@ -11,7 +11,6 @@ FROM golang:1.19.4-alpine3.17 as builder
 
 RUN mkdir /build
 COPY cmd /build/cmd
-COPY internal /build/internal
 COPY vendor /build/vendor
 COPY go.mod /build/go.mod
 WORKDIR /build
