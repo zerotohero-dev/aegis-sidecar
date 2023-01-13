@@ -17,7 +17,8 @@ WORKDIR /build
 RUN CGO_ENABLED=0 GOOS=linux go build -mod vendor -a -o aegis-sidecar ./cmd/main.go
 
 # generate clean, final image for end users
-FROM alpine:3.17
+# FROM alpine:3.17
+FROM gcr.io/distroless/static-debian11
 COPY --from=builder /build/aegis-sidecar .
 
 # executable
