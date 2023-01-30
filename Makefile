@@ -9,8 +9,11 @@
 VERSION=0.11.0
 PACKAGE=aegis-sidecar
 REPO=z2hdev/aegis-sidecar
+REPO_LOCAL="$(minikube ip):5000/aegis-sidecar"
 
 all: build bundle push
+
+all-local: build bundle push-local
 
 build:
 	go build -o ${PACKAGE} ./cmd/main.go
@@ -26,6 +29,11 @@ push:
 	docker build . -t ${PACKAGE}:${VERSION}
 	docker tag ${PACKAGE}:${VERSION} ${REPO}:${VERSION}
 	docker push ${REPO}:${VERSION}
+
+push-local:
+	docker build . -t ${PACKAGE}:${VERSION}
+	docker tag ${PACKAGE}:${VERSION} ${REPO_LOCAL}:${VERSION}
+	docker push ${REPO_LOCAL}:${VERSION}
 
 run-in-container:
 	docker run ${PACKAGE}:${VERSION}
