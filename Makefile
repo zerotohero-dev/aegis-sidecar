@@ -6,10 +6,10 @@
 #     .\_/.
 #
 
-VERSION=0.11.0
+VERSION=0.11.3
 PACKAGE=aegis-sidecar
 REPO=z2hdev/aegis-sidecar
-REPO_LOCAL="$(shell minikube ip):5000/aegis-sidecar"
+REPO_LOCAL="localhost:5000/aegis-sidecar"
 
 all: build bundle push
 
