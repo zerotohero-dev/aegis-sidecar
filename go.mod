@@ -1,6 +1,6 @@
 module github.com/zerotohero-dev/aegis-sidecar
 
-go 1.19
+go 1.20
 
 require (
 	github.com/zerotohero-dev/aegis-core v0.11.7
