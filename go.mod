@@ -3,8 +3,8 @@ module github.com/zerotohero-dev/aegis-sidecar
 go 1.19
 
 require (
-	github.com/zerotohero-dev/aegis-core v0.11.1
-	github.com/zerotohero-dev/aegis-sdk-go v0.11.5
+	github.com/zerotohero-dev/aegis-core v0.11.7
+	github.com/zerotohero-dev/aegis-sdk-go v0.11.6
 )
 
 require (
