@@ -6,7 +6,7 @@
 #     .\_/.
 #
 
-VERSION=0.11.5
+VERSION=0.11.20
 PACKAGE=aegis-sidecar
 REPO=z2hdev/aegis-sidecar
 REPO_LOCAL="localhost:5000/aegis-sidecar"
