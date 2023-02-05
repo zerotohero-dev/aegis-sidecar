@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/zerotohero-dev/aegis-core v0.11.7
-	github.com/zerotohero-dev/aegis-sdk-go v0.11.6
+	github.com/zerotohero-dev/aegis-sdk-go v0.11.22
 )
 
 require (
