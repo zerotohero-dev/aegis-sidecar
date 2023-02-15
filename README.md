@@ -8,8 +8,8 @@ keep your secrets… secret
 
 **Sidecar** (`aegis-sidecar`) will be injected to the pods as a sidecar.
 
-**Sidecar** periodically polls **Safe** to update the secrets data on a shared
-volume.
+**Sidecar** periodically polls **Aegis Safe** to update the secrets data on a 
+shared volume.
 
 [Check out Aegis’ README][aegis-readme] for more information about the project,
 high level design, contributing guidelines, and code of conduct.
