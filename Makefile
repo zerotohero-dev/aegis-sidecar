@@ -6,7 +6,7 @@
 #     .\_/.
 #
 
-VERSION=0.12.55
+VERSION=0.12.60
 PACKAGE=aegis-sidecar
 REPO=z2hdev/aegis-sidecar
 REPO_LOCAL="localhost:5000/aegis-sidecar"
@@ -38,4 +38,3 @@ push-local:
 
 run-in-container:
 	docker run ${PACKAGE}:${VERSION}
-
