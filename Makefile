@@ -6,7 +6,7 @@
 #     .\_/.
 #
 
-VERSION=0.13.0
+VERSION=0.13.5
 PACKAGE=aegis-sidecar
 REPO=z2hdev/aegis-sidecar
 REPO_LOCAL="localhost:5000/aegis-sidecar"
@@ -16,25 +16,19 @@ all: build bundle push
 all-local: build bundle push-local
 
 build:
-	go mod vendor
-	go build -o ${PACKAGE} ./cmd/main.go
+	./hack/build.sh $(PACKAGE)
 
 run:
-	go run ./cmd/main.go
+	./hack/run.sh
 
 bundle:
-	go mod vendor
-	docker build . -t ${PACKAGE}:${VERSION}
+	./hack/bundle.sh $(PACKAGE) $(VERSION)
 
 push:
-	docker build . -t ${PACKAGE}:${VERSION}
-	docker tag ${PACKAGE}:${VERSION} ${REPO}:${VERSION}
-	docker push ${REPO}:${VERSION}
+	./hack/push.sh $(PACKAGE) $(VERSION) $(REPO)
 
 push-local:
-	docker build . -t ${PACKAGE}:${VERSION}
-	docker tag ${PACKAGE}:${VERSION} ${REPO_LOCAL}:${VERSION}
-	docker push ${REPO_LOCAL}:${VERSION}
+	./hack/push-local.sh $(PACKAGE) $(VERSION) $(REPO_LOCAL)
 
 run-in-container:
-	docker run ${PACKAGE}:${VERSION}
+	./hack/run-in-container.sh $(PACKAGE) $(VERSION)
